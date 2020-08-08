@@ -1,15 +1,13 @@
-package cn.stackflow.workbench.app.account
+package cn.stackflow.workbench.ui.account
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import cn.stackflow.workbench.App
-import cn.stackflow.workbench.app.Constants.LOGIN_TOKEN
-import cn.stackflow.workbench.app.base.BaseModel
-import cn.stackflow.workbench.app.base.BaseViewModel
-import cn.stackflow.workbench.bean.BannerBean
-import cn.stackflow.workbench.bean.LoginReq
-import cn.stackflow.workbench.util.Cache
+import cn.stackflow.workbench.ui.Constants.LOGIN_TOKEN
+import cn.stackflow.workbench.common.base.BaseModel
+import cn.stackflow.workbench.common.base.BaseViewModel
+import cn.stackflow.workbench.common.bean.LoginReq
+import cn.stackflow.workbench.common.util.Cache
 import retrofit2.await
 import javax.inject.Inject
 
@@ -26,7 +24,12 @@ class LoginViewModel @Inject constructor(application: Application, model: BaseMo
      */
     fun login(username: String,password: String){
         launch {
-            var result = apiService.login(LoginReq(username, password)).await()
+            var result = apiService.login(
+                LoginReq(
+                    username,
+                    password
+                )
+            ).await()
             Log.i("LoginViewModel",result?.getErrorMessage())
             if(isSuccess(result)){
                 var loginResp = result.data

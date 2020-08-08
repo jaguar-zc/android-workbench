@@ -22,7 +22,7 @@
                 android:paddingLeft="@dimen/size_16dp"
                 android:paddingRight="@dimen/size_12dp"
                 android:paddingTop="@dimen/size_16dp"
-                android:paddingBottom="@dimen/size_16dp">
+                android:paddingBottom="@dimen/size_50dp">
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/civAvatar"
                     android:layout_width="@dimen/size_60dp"
@@ -134,6 +134,25 @@
                     android:drawableLeft="@drawable/ic_me_menu"
                     android:drawableRight="@drawable/ic_jump"
                     android:text="@string/me_menu4"
+                    android:background="@drawable/white_selector" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_line"
+                    android:layout_marginLeft="@dimen/size_16sp"
+                    android:layout_marginRight="@dimen/size_16sp"
+                    android:background="@color/line"/>
+                <TextView
+                    android:id="@+id/tvMenu5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/size_16dp"
+                    android:paddingRight="@dimen/size_12dp"
+                    android:paddingTop="@dimen/size_15dp"
+                    android:paddingBottom="@dimen/size_15dp"
+                    android:drawablePadding="@dimen/size_4dp"
+                    android:drawableLeft="@drawable/ic_me_menu"
+                    android:drawableRight="@drawable/ic_jump"
+                    android:text="@string/me_menu5"
                     android:background="@drawable/white_selector" />
                 <View
                     android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.ui.base
+package cn.stackflow.workbench.common.base
 
 import android.app.Application
 import androidx.annotation.StringRes
@@ -19,8 +19,7 @@ import javax.inject.Inject
 /**
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
-open class BaseViewModel @Inject constructor(application: Application, model: BaseModel?) :
-    DataViewModel(application, model) {
+open class BaseViewModel @Inject constructor(application: Application, model: BaseModel?) :  DataViewModel(application, model) {
 
     open fun getApp() = getApplication<App>()
 

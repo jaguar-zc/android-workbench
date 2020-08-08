@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.ui.base
+package cn.stackflow.workbench.common.base
 
 import com.king.frame.mvvmframe.base.BaseModel
 import com.king.frame.mvvmframe.data.IDataRepository

@@ -1,12 +1,11 @@
-package cn.stackflow.workbench.app.splash
+package cn.stackflow.workbench.ui.splash
 
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import cn.stackflow.workbench.R
-import cn.stackflow.workbench.app.base.BaseActivity
-import cn.stackflow.workbench.app.home.HomeActivity
+import cn.stackflow.workbench.common.base.BaseActivity
 import cn.stackflow.workbench.databinding.SplashActivityBinding
 import kotlinx.android.synthetic.main.splash_activity.*
 

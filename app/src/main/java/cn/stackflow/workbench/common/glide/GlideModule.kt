@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.glide
+package cn.stackflow.workbench.common.glide
 
 import android.content.Context
 import com.bumptech.glide.GlideBuilder

@@ -1,11 +1,11 @@
-package cn.stackflow.workbench.app.adapter
+package cn.stackflow.workbench.ui.adapter
 
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import cn.stackflow.workbench.R
-import cn.stackflow.workbench.bean.BannerImage
-import cn.stackflow.workbench.glide.ImageLoader
+import cn.stackflow.workbench.common.bean.BannerImage
+import cn.stackflow.workbench.common.glide.ImageLoader
 import com.youth.banner.adapter.BannerAdapter
 
 /**
@@ -20,7 +20,9 @@ class BannerImageAdapter<T : BannerImage>(datas: List<T>? = null) : BannerAdapte
             ViewGroup.LayoutParams.MATCH_PARENT
         )
         imageView.scaleType = ImageView.ScaleType.CENTER_CROP
-        return BannerViewHolder(imageView)
+        return BannerViewHolder(
+            imageView
+        )
     }
 
     override fun onBindView(holder: BannerViewHolder, data: T, position: Int, size: Int) {

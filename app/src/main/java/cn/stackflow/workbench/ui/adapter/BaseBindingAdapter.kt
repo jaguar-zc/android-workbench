@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.app.adapter
+package cn.stackflow.workbench.ui.adapter
 
 import com.chad.library.adapter.base.BaseQuickAdapter
 import cn.stackflow.workbench.BR

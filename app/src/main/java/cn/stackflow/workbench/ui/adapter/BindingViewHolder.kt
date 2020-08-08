@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.app.adapter
+package cn.stackflow.workbench.ui.adapter
 
 import android.view.View
 import androidx.databinding.DataBindingUtil

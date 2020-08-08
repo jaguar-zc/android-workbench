@@ -1,11 +1,10 @@
-package cn.stackflow.workbench.config
+package cn.stackflow.workbench.common.config
 
 import android.content.Context
-import cn.stackflow.workbench.app.Constants
+import cn.stackflow.workbench.ui.Constants
 import com.king.base.baseurlmanager.BaseUrlManager
 import com.king.frame.mvvmframe.config.FrameConfigModule
 import com.king.frame.mvvmframe.di.module.ConfigModule
-import okhttp3.Interceptor
 
 /**
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>

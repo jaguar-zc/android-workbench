@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.ui.base
+package cn.stackflow.workbench.common.base
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,16 +12,16 @@ import androidx.annotation.StringRes
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContextCompat
 import androidx.databinding.ViewDataBinding
+import cn.stackflow.workbench.R
+import cn.stackflow.workbench.ui.Constants
+import cn.stackflow.workbench.ui.MainActivity
+import cn.stackflow.workbench.ui.account.CodeLoginActivity
+import cn.stackflow.workbench.ui.account.LoginActivity
 import com.king.base.util.StringUtils
 import com.king.base.util.ToastUtils
 import com.king.frame.mvvmframe.base.BaseActivity
 import com.king.frame.mvvmframe.base.BaseModel
 import com.king.frame.mvvmframe.base.BaseViewModel
-import cn.stackflow.workbench.R
-import cn.stackflow.workbench.ui.Constants
-import cn.stackflow.workbench.ui.account.CodeLoginActivity
-import cn.stackflow.workbench.ui.account.LoginActivity
-import cn.stackflow.workbench.ui.HomeActivity
 import com.tbruyelle.rxpermissions2.RxPermissions
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.toolbar.*
@@ -158,7 +158,7 @@ abstract class BaseActivity<VM : BaseViewModel<out BaseModel>,VDB : ViewDataBind
     }
 
     fun startHomeActivity(){
-        val intent = Intent(context, HomeActivity::class.java)
+        val intent = Intent(context, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         val optionsCompat = ActivityOptionsCompat.makeCustomAnimation(context, R.anim.alpha_in_anim, R.anim.alpha_out_anim)
         startActivity(intent, optionsCompat.toBundle())

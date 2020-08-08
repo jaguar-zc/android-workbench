@@ -1,9 +1,9 @@
-package cn.stackflow.workbench.ui.home
+package cn.stackflow.workbench.ui.layout
 
 import android.os.Bundle
 import androidx.core.view.isVisible
 import cn.stackflow.workbench.R
-import cn.stackflow.workbench.ui.base.BaseFragment
+import cn.stackflow.workbench.common.base.BaseFragment
 import cn.stackflow.workbench.databinding.MenuFragmentBinding
 import kotlinx.android.synthetic.main.home_toolbar.*
 import kotlinx.android.synthetic.main.menu_fragment.*
@@ -15,13 +15,15 @@ class MenuFragment(var text: String,var showToolbar: Boolean) : BaseFragment<Men
 
     companion object{
         fun newInstance(text: String,showToolbar: Boolean = true): MenuFragment {
-            return MenuFragment(text, showToolbar)
+            return MenuFragment(
+                text,
+                showToolbar
+            )
         }
     }
 
     override fun initData(savedInstanceState: Bundle?) {
         super.initData(savedInstanceState)
-
         toolbar.isVisible = showToolbar
 
         tv.text = text

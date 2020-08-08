@@ -39,7 +39,7 @@
             android:drawablePadding="@dimen/size_6dp"
             android:padding="@dimen/size_8dp"
             android:gravity="center_vertical"
-            android:inputType="number"
+            android:inputType="text"
             android:maxLength="@integer/username_max_length"
             android:drawableLeft="@drawable/ic_username"
             android:drawableRight="@drawable/btn_edit_clear_selector"

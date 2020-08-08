@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.ui.base
+package cn.stackflow.workbench.common.base
 
 import android.graphics.Bitmap
 import android.net.http.SslError

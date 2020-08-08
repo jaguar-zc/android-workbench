@@ -1,9 +1,9 @@
-package cn.stackflow.workbench.ui.me
+package cn.stackflow.workbench.ui.layout.st
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
-import cn.stackflow.workbench.ui.base.BaseModel
-import cn.stackflow.workbench.ui.base.BaseViewModel
+import cn.stackflow.workbench.common.base.BaseModel
+import cn.stackflow.workbench.common.base.BaseViewModel
 import cn.stackflow.workbench.common.bean.BannerBean
 import cn.stackflow.workbench.common.bean.UserDTO
 import retrofit2.await

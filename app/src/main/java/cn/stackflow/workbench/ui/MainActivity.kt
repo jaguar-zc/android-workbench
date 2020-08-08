@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction
 import cn.stackflow.workbench.R
 import cn.stackflow.workbench.ui.Constants.LOGIN_TOKEN
 import cn.stackflow.workbench.common.base.BaseActivity
+import cn.stackflow.workbench.common.base.BaseViewModel
 import cn.stackflow.workbench.ui.layout.st.MeFragment
 import cn.stackflow.workbench.common.base.TabFragment
 import cn.stackflow.workbench.databinding.HomeActivityBinding
@@ -18,7 +19,7 @@ import cn.stackflow.workbench.ui.layout.msg.MsgFragment
 /**
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
-class HomeActivity : BaseActivity<HomeViewModel, HomeActivityBinding>() {
+class MainActivity : BaseActivity<MainViewModel, HomeActivityBinding>() {
 
     var fragment1: Fragment? = null
     var fragment2: Fragment? = null

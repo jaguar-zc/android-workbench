@@ -12,7 +12,7 @@ import javax.inject.Inject
 /**
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
-class HomeViewModel @Inject constructor(application: Application, model: BaseModel?) : BaseViewModel(application, model){
+class MsgViewModel @Inject constructor(application: Application, model: BaseModel?) : BaseViewModel(application, model){
 
 
     val liveDataBanner by lazy { MutableLiveData<List<BannerBean>>()}

@@ -1,7 +1,7 @@
-package cn.stackflow.workbench.app
+package cn.stackflow.workbench.ui
 
 /**
- * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
+ *
  */
 object Constants {
 
@@ -9,15 +9,10 @@ object Constants {
      * 是否支持动态切换接口地址
      */
     const val isDomain = false
-
-    //TODO 接口地址
 //    const val BASE_URL = "https://github.com"
     const val BASE_URL = "http://47.110.10.117:8080/api/v1/"
 
-    //TODO Bugly申请的AppId
-    const val BUGLY_APP_ID = "e0e81b6448"
-
-    const val TAG = "Jenly"
+    const val TAG = "Workbench"
     const val LOGIN_TOKEN = "LOGIN_TOKEN"
 
     const val PAGE_SIZE = 20

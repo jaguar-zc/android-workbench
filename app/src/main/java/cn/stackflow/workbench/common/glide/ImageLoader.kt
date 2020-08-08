@@ -1,9 +1,10 @@
-package cn.stackflow.workbench.glide
+package cn.stackflow.workbench.common.glide
 
 import android.app.Activity
 import android.content.Context
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import cn.stackflow.workbench.common.glide.GlideApp
 
 /**
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>

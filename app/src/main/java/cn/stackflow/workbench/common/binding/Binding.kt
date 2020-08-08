@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.binding
+package cn.stackflow.workbench.common.binding
 
 import android.widget.ImageView
 import android.widget.TextView
@@ -6,7 +6,7 @@ import androidx.databinding.BindingAdapter
 import com.bumptech.glide.request.RequestOptions
 import com.king.base.util.TimeUtils
 import cn.stackflow.workbench.R
-import cn.stackflow.workbench.glide.GlideApp
+import cn.stackflow.workbench.common.glide.GlideApp
 
 /**
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>

@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.util
+package cn.stackflow.workbench.common.util
 
 import java.util.regex.Pattern
 
@@ -19,7 +19,8 @@ object CheckUtils{
     /**
      * 校验用户名
      */
-    fun checkUsername(username: String) = checkPhoneNumber(username)
+    fun checkUsername(username: String) =
+        checkPhoneNumber(username)
 
     /**
      * 校验手机号

@@ -1,6 +1,6 @@
-package cn.stackflow.workbench.api
+package cn.stackflow.workbench.common.api
 
-import cn.stackflow.workbench.bean.*
+import cn.stackflow.workbench.common.bean.*
 import retrofit2.Call
 import retrofit2.http.*
 

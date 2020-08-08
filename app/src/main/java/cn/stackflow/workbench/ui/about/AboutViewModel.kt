@@ -1,8 +1,8 @@
-package cn.stackflow.workbench.app.about
+package cn.stackflow.workbench.ui.about
 
 import android.app.Application
-import cn.stackflow.workbench.app.base.BaseModel
-import cn.stackflow.workbench.app.base.BaseViewModel
+import cn.stackflow.workbench.common.base.BaseModel
+import cn.stackflow.workbench.common.base.BaseViewModel
 import retrofit2.await
 import javax.inject.Inject
 

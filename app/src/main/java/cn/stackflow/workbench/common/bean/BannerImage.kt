@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.bean
+package cn.stackflow.workbench.common.bean
 
 /**
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>

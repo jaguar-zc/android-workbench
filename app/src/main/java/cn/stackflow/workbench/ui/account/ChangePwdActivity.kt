@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.app.account
+package cn.stackflow.workbench.ui.account
 
 import android.os.Bundle
 import android.text.Editable
@@ -6,9 +6,9 @@ import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.View
 import cn.stackflow.workbench.R
-import cn.stackflow.workbench.app.base.BaseActivity
+import cn.stackflow.workbench.common.base.BaseActivity
 import cn.stackflow.workbench.databinding.ChangePwdActivityBinding
-import cn.stackflow.workbench.util.CheckUtils
+import cn.stackflow.workbench.common.util.CheckUtils
 import kotlinx.android.synthetic.main.change_pwd_activity.*
 
 /**

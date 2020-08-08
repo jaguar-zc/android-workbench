@@ -1,9 +1,8 @@
-package cn.stackflow.workbench.app.splash
+package cn.stackflow.workbench.ui.splash
 
 import android.app.Application
-import cn.stackflow.workbench.app.base.BaseModel
-import cn.stackflow.workbench.app.base.BaseViewModel
-import retrofit2.await
+import cn.stackflow.workbench.common.base.BaseModel
+import cn.stackflow.workbench.common.base.BaseViewModel
 import javax.inject.Inject
 
 /**

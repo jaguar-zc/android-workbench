@@ -1,13 +1,9 @@
-package cn.stackflow.workbench.di.module
+package cn.stackflow.workbench.common.di.module
 
+import cn.stackflow.workbench.ui.MainActivity
+import cn.stackflow.workbench.ui.account.LoginActivity
+import cn.stackflow.workbench.ui.splash.SplashActivity
 import com.king.frame.mvvmframe.di.component.BaseActivitySubcomponent
-import cn.stackflow.workbench.app.about.AboutActivity
-import cn.stackflow.workbench.app.account.*
-import cn.stackflow.workbench.app.base.WebActivity
-import cn.stackflow.workbench.app.home.HomeActivity
-import cn.stackflow.workbench.app.splash.SplashActivity
-import cn.stackflow.workbench.temp.TempActivity
-import cn.stackflow.workbench.temp.TempListActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -17,37 +13,37 @@ import dagger.android.ContributesAndroidInjector
 @Module(subcomponents = [BaseActivitySubcomponent::class])
 abstract class ActivityModule {
 
-    @ContributesAndroidInjector
-    abstract fun contributeTempActivity(): TempActivity
-
-    @ContributesAndroidInjector
-    abstract fun contributeTempListActivity(): TempListActivity
+//    @ContributesAndroidInjector
+//    abstract fun contributeTempActivity(): TempActivity
+//
+//    @ContributesAndroidInjector
+//    abstract fun contributeTempListActivity(): TempListActivity
 
     @ContributesAndroidInjector
     abstract fun contributeSplashActivity(): SplashActivity
 
     @ContributesAndroidInjector
-    abstract fun contributeHomeActivity(): HomeActivity
-
-    @ContributesAndroidInjector
-    abstract fun contributeAboutActivity(): AboutActivity
-
-    @ContributesAndroidInjector
-    abstract fun contributeWebActivity(): WebActivity
-
+    abstract fun contributeMainActivity(): MainActivity
+//
+//    @ContributesAndroidInjector
+//    abstract fun contributeAboutActivity(): AboutActivity
+//
+//    @ContributesAndroidInjector
+//    abstract fun contributeWebActivity(): WebActivity
+//
     @ContributesAndroidInjector
     abstract fun contributeLoginActivity(): LoginActivity
-
-    @ContributesAndroidInjector
-    abstract fun contributeCodeLoginActivity(): CodeLoginActivity
-
-    @ContributesAndroidInjector
-    abstract fun contributeRegisterActivity(): RegisterActivity
-
-    @ContributesAndroidInjector
-    abstract fun contributeResetPwdActivity(): ResetPwdActivity
-
-    @ContributesAndroidInjector
-    abstract fun contributeChangePwdActivity(): ChangePwdActivity
+//
+//    @ContributesAndroidInjector
+//    abstract fun contributeCodeLoginActivity(): CodeLoginActivity
+//
+//    @ContributesAndroidInjector
+//    abstract fun contributeRegisterActivity(): RegisterActivity
+//
+//    @ContributesAndroidInjector
+//    abstract fun contributeResetPwdActivity(): ResetPwdActivity
+//
+//    @ContributesAndroidInjector
+//    abstract fun contributeChangePwdActivity(): ChangePwdActivity
 
 }

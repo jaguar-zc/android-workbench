@@ -1,14 +1,13 @@
-package cn.stackflow.workbench.app.about
+package cn.stackflow.workbench.ui.about
 
 import android.os.Bundle
 import android.view.View
-import com.king.app.dialog.AppDialog
-import com.king.app.dialog.AppDialogConfig
-import com.king.app.updater.AppUpdater
 import cn.stackflow.workbench.BuildConfig
 import cn.stackflow.workbench.R
-import cn.stackflow.workbench.app.base.BaseActivity
+import cn.stackflow.workbench.common.base.BaseActivity
 import cn.stackflow.workbench.databinding.AboutActivityBinding
+import com.king.app.dialog.AppDialog
+import com.king.app.dialog.AppDialogConfig
 import kotlinx.android.synthetic.main.about_activity.*
 
 /**

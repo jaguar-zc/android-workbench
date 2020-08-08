@@ -1,12 +1,12 @@
-package cn.stackflow.workbench.di.module
+package cn.stackflow.workbench.common.di.module
 
+import cn.stackflow.workbench.common.base.TabFragment
+import cn.stackflow.workbench.ui.layout.MenuFragment
+import cn.stackflow.workbench.ui.layout.WorkbenchFragment
+import cn.stackflow.workbench.ui.layout.calendar.CalendarFragment
+import cn.stackflow.workbench.ui.layout.msg.MsgFragment
+import cn.stackflow.workbench.ui.layout.st.MeFragment
 import com.king.frame.mvvmframe.di.component.BaseFragmentSubcomponent
-import cn.stackflow.workbench.app.home.MenuFragment
-import cn.stackflow.workbench.app.me.MeFragment
-import cn.stackflow.workbench.app.base.TabFragment
-import cn.stackflow.workbench.app.home.HomeFragment
-import cn.stackflow.workbench.temp.TempFragment
-import cn.stackflow.workbench.temp.TempListFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -16,23 +16,29 @@ import dagger.android.ContributesAndroidInjector
 @Module(subcomponents = [BaseFragmentSubcomponent::class])
 abstract class FragmentModule {
 
-    @ContributesAndroidInjector
-    abstract fun contributeTempFragment(): TempFragment
+//    @ContributesAndroidInjector
+//    abstract fun contributeTempFragment(): TempFragment
+//
+//    @ContributesAndroidInjector
+//    abstract fun contributeTempListFragment(): TempListFragment
 
     @ContributesAndroidInjector
-    abstract fun contributeTempListFragment(): TempListFragment
+    abstract fun contributeMsgFragment(): MsgFragment
 
     @ContributesAndroidInjector
-    abstract fun contributeHomeFragment(): HomeFragment
+    abstract fun contributeCalendarFragment(): CalendarFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeWorkbenchFragment(): WorkbenchFragment
 
     @ContributesAndroidInjector
     abstract fun contributeMenuFragment(): MenuFragment
 
     @ContributesAndroidInjector
-    abstract fun contributeMeFragment(): MeFragment
+    abstract fun contributeTabFragment(): TabFragment
 
     @ContributesAndroidInjector
-    abstract fun contributeTabFragment(): TabFragment
+    abstract fun contributeMeFragment(): MeFragment
 
 
 }

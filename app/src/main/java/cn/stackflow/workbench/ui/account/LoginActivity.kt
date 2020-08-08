@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.app.account
+package cn.stackflow.workbench.ui.account
 
 import android.os.Bundle
 import android.text.Editable
@@ -7,8 +7,8 @@ import android.text.TextWatcher
 import android.view.View
 import androidx.lifecycle.Observer
 import cn.stackflow.workbench.R
-import cn.stackflow.workbench.app.Constants
-import cn.stackflow.workbench.app.base.BaseActivity
+import cn.stackflow.workbench.ui.Constants
+import cn.stackflow.workbench.common.base.BaseActivity
 import cn.stackflow.workbench.databinding.LoginActivityBinding
 import kotlinx.android.synthetic.main.login_activity.*
 

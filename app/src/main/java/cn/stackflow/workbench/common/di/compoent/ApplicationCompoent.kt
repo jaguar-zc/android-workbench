@@ -1,9 +1,9 @@
-package cn.stackflow.workbench.di.compoent
+package cn.stackflow.workbench.common.di.compoent
 
 import com.king.frame.mvvmframe.di.component.AppComponent
 import com.king.frame.mvvmframe.di.scope.ApplicationScope
 import cn.stackflow.workbench.App
-import cn.stackflow.workbench.di.module.ApplicationModule
+import cn.stackflow.workbench.common.di.module.ApplicationModule
 import dagger.Component
 
 /**

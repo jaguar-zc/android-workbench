@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.ui.base
+package cn.stackflow.workbench.common.base
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData

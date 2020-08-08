@@ -9,7 +9,7 @@ android {
     buildToolsVersion build_versions.buildTools
 
     defaultConfig {
-        applicationId "com.king.template"
+        applicationId "cn.stackflow.workbench"
         minSdkVersion build_versions.minSdk
         targetSdkVersion build_versions.targetSdk
         versionCode app_version.versionCode
@@ -107,9 +107,9 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$versions.dagger"
 
     implementation "com.king.frame:mvvmframe:$versions.mvvmframe"
-
-    implementation "com.king.thread:nevercrash:$versions.nevercrash"
-    //app-updater
+//
+//    implementation "com.king.thread:nevercrash:$versions.nevercrash"
+//    //app-updater
     implementation "com.king.app:app-updater:$versions.appUpdater"
     //app-dialog
     implementation "com.king.app:app-dialog:$versions.appUpdater"
@@ -132,10 +132,10 @@ dependencies {
     implementation "com.tencent:mmkv:$versions.mmkv"
 
     implementation "com.github.tbruyelle:rxpermissions:$versions.rxpermissions"
-
-    implementation "com.tencent.bugly:crashreport_upgrade:$versions.bugly"
-
-    implementation "com.tencent.tinker:tinker-android-lib:$versions.tinker"
+//
+//    implementation "com.tencent.bugly:crashreport_upgrade:$versions.bugly"
+//
+//    implementation "com.tencent.tinker:tinker-android-lib:$versions.tinker"
 
     implementation "androidx.multidex:multidex:$versions.multidex"
 

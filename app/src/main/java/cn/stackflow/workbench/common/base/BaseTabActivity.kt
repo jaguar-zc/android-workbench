@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.ui.base
+package cn.stackflow.workbench.common.base
 
 import android.os.Bundle
 import androidx.databinding.ViewDataBinding
