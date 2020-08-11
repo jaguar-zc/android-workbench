@@ -3,16 +3,16 @@ package cn.stackflow.workbench.ui.layout.st
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.Observer
 import cn.stackflow.workbench.BuildConfig
 import cn.stackflow.workbench.R
-import cn.stackflow.workbench.ui.Constants
-import cn.stackflow.workbench.ui.about.AboutActivity
-import cn.stackflow.workbench.ui.account.ChangePwdActivity
 import cn.stackflow.workbench.common.base.BaseFragment
 import cn.stackflow.workbench.common.glide.ImageLoader
 import cn.stackflow.workbench.databinding.MeFragmentBinding
+import cn.stackflow.workbench.ui.Constants
+import cn.stackflow.workbench.ui.about.AboutActivity
+import cn.stackflow.workbench.ui.account.ChangePwdActivity
+import cn.stackflow.workbench.ui.setting.DeptActivity
 import kotlinx.android.synthetic.main.home_toolbar.*
 import kotlinx.android.synthetic.main.me_fragment.*
 import kotlinx.android.synthetic.main.toolbar.view.*
@@ -80,7 +80,7 @@ class MeFragment : BaseFragment<MeViewModel, MeFragmentBinding>(), View.OnClickL
     override fun onClick(v: View) {
         when (v.id) {
             R.id.rlUser -> clickUser()
-//            R.id.tvMenu1 -> clickChangePassword()
+            R.id.tvMenu1 -> startActivity(DeptActivity::class.java)
             R.id.tvMenu2 -> startWebActivity("https://github.com/jenly1314", "GitHub")
             R.id.tvMenu3 -> startWebActivity("https://jenly1314.github.io", "Jenly")
             R.id.tvMenu4 -> startWebActivity("https://developer.android.google.cn", "Android")

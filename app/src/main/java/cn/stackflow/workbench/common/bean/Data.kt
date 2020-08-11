@@ -67,3 +67,12 @@ data class RoleDTO(
 )
 
 
+data class DeptDTO(
+    val id: String? = null,
+    val createUser: String? = null,
+    val createTime: String? = null,
+    val name //部门名
+    : String? = null,
+    val remark //描述
+    : String? = null
+)

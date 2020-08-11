@@ -31,4 +31,9 @@ interface ApiService {
     fun getContract(@Part q: String): Call<Result<List<ContractDTO>>>
 
 
+
+    @GET("system/dept")
+    fun getDeptList(  @Part page: Int,@Part size: Int): Call<Result<List<DeptDTO>>>
+
+
 }

@@ -2,6 +2,7 @@ package cn.stackflow.workbench.common.di.module
 
 import cn.stackflow.workbench.ui.MainActivity
 import cn.stackflow.workbench.ui.account.LoginActivity
+import cn.stackflow.workbench.ui.setting.DeptActivity
 import cn.stackflow.workbench.ui.splash.SplashActivity
 import com.king.frame.mvvmframe.di.component.BaseActivitySubcomponent
 import dagger.Module
@@ -33,6 +34,11 @@ abstract class ActivityModule {
 //
     @ContributesAndroidInjector
     abstract fun contributeLoginActivity(): LoginActivity
+
+
+    @ContributesAndroidInjector
+    abstract fun contributeDeptActivity(): DeptActivity
+
 //
 //    @ContributesAndroidInjector
 //    abstract fun contributeCodeLoginActivity(): CodeLoginActivity

@@ -15,12 +15,14 @@ import com.scwang.smartrefresh.header.MaterialHeader
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter
 import es.dmoral.toasty.Toasty
-import timber.log.Timber
 
 /**
  *
  */
 class App : BaseApplication() {
+    companion object{
+        lateinit var application:App ;
+    }
     init {
         SmartRefreshLayout.setDefaultRefreshHeaderCreator { context, layout ->
             layout.setPrimaryColorsId(
@@ -82,5 +84,6 @@ class App : BaseApplication() {
             .build()
             .inject(this)
         Cache.initialize(this)
+        application = this;
     }
 }

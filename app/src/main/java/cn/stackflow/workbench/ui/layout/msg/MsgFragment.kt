@@ -50,8 +50,7 @@ class MsgFragment : BaseFragment<MsgViewModel, MsgFragmentBinding>() {
         toolbar.tvTitle.setText(R.string.home_menu1)
         //TODO Banner初始化示例
         with(banner){
-            adapter =
-                BannerImageAdapter<BannerBean>()
+            adapter = BannerImageAdapter<BannerBean>()
             indicator = CircleIndicator(context)
             setIndicatorGravity(IndicatorConfig.Direction.RIGHT)
         }

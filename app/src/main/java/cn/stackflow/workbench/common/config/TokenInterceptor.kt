@@ -1,7 +1,12 @@
 package cn.stackflow.workbench.common.config
 
+import android.content.Intent
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import cn.stackflow.workbench.App
+import cn.stackflow.workbench.common.receiver.CMDBroadcastReceiver
 import cn.stackflow.workbench.ui.Constants
 import cn.stackflow.workbench.common.util.Cache
+import cn.stackflow.workbench.ui.account.LoginActivity
 import okhttp3.Interceptor
 import okhttp3.Response
 
@@ -14,6 +19,11 @@ class TokenInterceptor : Interceptor {
             .header("Authorization", Cache.getString(Constants.LOGIN_TOKEN,""))
             .build()
         //继续发送原始请求
-        return chain.proceed(request)
+        var proceed = chain.proceed(request)
+        if (proceed.code() == 401) {
+            var intent = Intent(CMDBroadcastReceiver.ACTION)
+            LocalBroadcastManager.getInstance(App.application).sendBroadcast(intent)
+        }
+        return proceed
     }
 }

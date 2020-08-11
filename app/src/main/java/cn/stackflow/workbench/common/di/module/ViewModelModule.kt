@@ -7,6 +7,7 @@ import cn.stackflow.workbench.ui.account.LoginViewModel
 import cn.stackflow.workbench.ui.layout.MenuViewModel
 import cn.stackflow.workbench.ui.layout.msg.MsgViewModel
 import cn.stackflow.workbench.ui.layout.st.MeViewModel
+import cn.stackflow.workbench.ui.setting.DeptViewModel
 import cn.stackflow.workbench.ui.splash.SplashViewModel
 import com.king.frame.mvvmframe.di.scope.ViewModelKey
 import dagger.Binds
@@ -64,6 +65,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(MainViewModel::class)
     abstract fun bindMainViewModel(viewModel: MainViewModel) : ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(DeptViewModel::class)
+    abstract fun bindDeptViewModel(viewModel: DeptViewModel) : ViewModel
 
     @Binds
     @IntoMap
