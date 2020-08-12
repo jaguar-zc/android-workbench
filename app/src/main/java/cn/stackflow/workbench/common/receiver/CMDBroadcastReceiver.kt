@@ -5,16 +5,25 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 import cn.stackflow.workbench.ui.account.LoginActivity
+import com.orhanobut.logger.Logger
 
 open class CMDBroadcastReceiver : BroadcastReceiver() {
     companion object {
-        var ACTION = "android.intent.action.CMD_BROADCAST_RECEIVER"
+        var ACTION = "cn.stackflow.workbench.action.CMD"
     }
-
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        TODO("Not yet implemented")
-        Toast.makeText(context, "Intent Detected.", Toast.LENGTH_LONG).show();
-        context?.startActivity(Intent(context,LoginActivity::class.java))
+        Logger.d("CMDBroadcastReceiver")
+        val cmd = intent?.getStringExtra("cmd")
+
+        Toast.makeText(context, "CMD:$cmd", Toast.LENGTH_LONG).show();
+        var intentLogin = Intent(context, LoginActivity::class.java)
+        intentLogin.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        context?.startActivity(intentLogin)
     }
+
+
+
+
+
 }

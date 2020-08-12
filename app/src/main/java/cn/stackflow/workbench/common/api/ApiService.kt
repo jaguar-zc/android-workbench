@@ -3,6 +3,7 @@ package cn.stackflow.workbench.common.api
 import cn.stackflow.workbench.common.bean.*
 import retrofit2.Call
 import retrofit2.http.*
+import java.util.*
 
 
 /**
@@ -22,18 +23,27 @@ interface ApiService {
 
     @GET("contract/self/list")
     fun getContract(
-        @Part page: Int,
-        @Part size: Int,
-        @Part auditStatus: String
+        @Part("page") page: Int,
+        @Part("size") size: Int,
+        @Part("auditStatus")  auditStatus: String
     ): Call<Result<PageDTO<ContractDTO>>>
 
     @GET("contract/self/search")
-    fun getContract(@Part q: String): Call<Result<List<ContractDTO>>>
+    fun getContract(@Part("q") q: String): Call<Result<List<ContractDTO>>>
 
 
 
     @GET("system/dept")
-    fun getDeptList(  @Part page: Int,@Part size: Int): Call<Result<List<DeptDTO>>>
+    fun getDeptList(  @Query("page") page: Int,
+                      @Query("size") size: Int): Call<Result<PageDTO<List<DeptDTO>>>>
+
+
+    @PUT("system/dept")
+    fun updateDept( @Body deptDTO: DeptDTO) : Call<Result<String>>
+
+
+    @POST("system/dept")
+    fun addDept( @Body deptDTO: DeptDTO) : Call<Result<String>>
 
 
 }

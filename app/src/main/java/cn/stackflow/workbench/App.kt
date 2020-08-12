@@ -15,6 +15,7 @@ import com.scwang.smartrefresh.header.MaterialHeader
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter
 import es.dmoral.toasty.Toasty
+import timber.log.Timber
 
 /**
  *
@@ -47,13 +48,13 @@ class App : BaseApplication() {
 
         Logger.addLogAdapter(AndroidLogAdapter(formatStrategy))
 //
-//        Timber.plant(object : Timber.DebugTree() {
-//            override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
-//                if (BuildConfig.DEBUG) {
-//                    Logger.log(priority, tag, message, t)
-//                }
-//            }
-//        })
+        Timber.plant(object : Timber.DebugTree() {
+            override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
+                if (BuildConfig.DEBUG) {
+                    Logger.log(priority, tag, message, t)
+                }
+            }
+        })
 
         super.attachBaseContext(base)
 

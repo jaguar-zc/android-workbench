@@ -12,7 +12,7 @@ data class Bean(
 data class LoginReq(var username: String, var password: String)
 data class ResourceDTO(var key: String, var title: String, var children: List<ResourceDTO>)
 data class LoginResp(var token: String)
-data class PageDTO<T>(var page: Int, var size: Int, var data: T)
+data class PageDTO<T>(var page: Int, var size: Int, var rows: T)
 data class ContractDTO(
     var id: String,
     var contractNo: String,

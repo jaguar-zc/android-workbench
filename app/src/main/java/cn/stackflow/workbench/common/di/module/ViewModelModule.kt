@@ -7,6 +7,7 @@ import cn.stackflow.workbench.ui.account.LoginViewModel
 import cn.stackflow.workbench.ui.layout.MenuViewModel
 import cn.stackflow.workbench.ui.layout.msg.MsgViewModel
 import cn.stackflow.workbench.ui.layout.st.MeViewModel
+import cn.stackflow.workbench.ui.setting.DeptEditViewModel
 import cn.stackflow.workbench.ui.setting.DeptViewModel
 import cn.stackflow.workbench.ui.splash.SplashViewModel
 import com.king.frame.mvvmframe.di.scope.ViewModelKey
@@ -73,8 +74,15 @@ abstract class ViewModelModule {
 
     @Binds
     @IntoMap
+    @ViewModelKey(DeptEditViewModel::class)
+    abstract fun bindDeptEditViewModel(viewModel: DeptEditViewModel) : ViewModel
+
+    @Binds
+    @IntoMap
     @ViewModelKey(MsgViewModel::class)
     abstract fun bindMsgViewModel(viewModel: MsgViewModel) : ViewModel
+
+
 
 
 //

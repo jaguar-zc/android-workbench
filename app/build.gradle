@@ -90,6 +90,8 @@ dependencies {
     implementation "androidx.core:core-ktx:$versions.coreKtx"
     implementation "com.google.android.material:material:$versions.material"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
+//    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
+//    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
 
     testImplementation "junit:junit:$versions.junit"
     androidTestImplementation "androidx.test.ext:junit:$versions.androidExtJunit"
@@ -135,7 +137,7 @@ dependencies {
 //
 //    implementation "com.tencent.bugly:crashreport_upgrade:$versions.bugly"
 //
-//    implementation "com.tencent.tinker:tinker-android-lib:$versions.tinker"
+    implementation "com.tencent.tinker:tinker-android-lib:$versions.tinker"
 
     implementation "androidx.multidex:multidex:$versions.multidex"
 

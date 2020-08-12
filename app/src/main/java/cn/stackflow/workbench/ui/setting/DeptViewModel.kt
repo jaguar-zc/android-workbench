@@ -2,6 +2,7 @@ package cn.stackflow.workbench.ui.setting
 
 import android.app.Application
 import cn.stackflow.workbench.common.base.BaseModel
+import cn.stackflow.workbench.common.base.BaseViewModel
 import cn.stackflow.workbench.common.base.ListViewModel
 import cn.stackflow.workbench.common.bean.Bean
 import cn.stackflow.workbench.common.bean.DeptDTO
@@ -16,7 +17,7 @@ class DeptViewModel @Inject constructor(application: Application, model: BaseMod
             val result = apiService.getDeptList(curPage, pageSize).await()
             if (isSuccess(result)) {
 
-                liveData.value = result.data
+                liveData.value = result.data?.rows
             }
             liveData.value = arrayListOf()
     }
