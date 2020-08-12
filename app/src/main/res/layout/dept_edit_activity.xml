@@ -55,7 +55,6 @@
             android:layout_marginLeft="@dimen/size_20dp"
             android:layout_marginRight="@dimen/size_20dp"
             android:layout_marginTop="@dimen/size_20dp"
-            android:text="@string/tips_password_matcher"
             android:textColor="@color/text_9"
             android:textSize="@dimen/size_14sp"
             app:layout_constraintLeft_toLeftOf="parent"

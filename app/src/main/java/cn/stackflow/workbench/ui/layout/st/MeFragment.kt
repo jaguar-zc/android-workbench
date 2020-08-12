@@ -39,7 +39,7 @@ class MeFragment : BaseFragment<MeViewModel, MeFragmentBinding>(), View.OnClickL
 
         toolbar.isVisible = true
         toolbar.tvTitle.text = ""
-//        updateUI()
+        updateUI()
         tvAppVersion.text = "V ${BuildConfig.VERSION_NAME}"
 
         rlUser.setOnClickListener(this)
@@ -51,9 +51,8 @@ class MeFragment : BaseFragment<MeViewModel, MeFragmentBinding>(), View.OnClickL
     }
 
     private fun updateUI() {
-        //TODO 更新UI显示
         tvName.text = Constants.TAG
-        tvUsername.text = "138****8888"
+        tvUsername.text = "***********"
     }
 
     override fun getLayoutId(): Int {

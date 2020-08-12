@@ -39,5 +39,6 @@
 
     <color name="btn_bg_normal">#0d7fea</color>
     <color name="btn_bg_pressed">#0c6aad</color>
+    <color name="btn_bg_pressed_">#29638C</color>
 
 </resources>

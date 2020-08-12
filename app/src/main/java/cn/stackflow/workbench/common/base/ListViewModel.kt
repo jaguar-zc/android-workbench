@@ -9,7 +9,7 @@ import cn.stackflow.workbench.ui.Constants
  */
 abstract class ListViewModel<T> constructor(application: Application, model: BaseModel?) : BaseViewModel(application, model){
 
-    val liveData by lazy { MutableLiveData<Collection<T>>() }
+    val liveData by lazy { MutableLiveData<List<T>>() }
 
     open fun pageSize() = Constants.PAGE_SIZE
 
