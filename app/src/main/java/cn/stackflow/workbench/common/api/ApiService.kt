@@ -17,6 +17,11 @@ interface ApiService {
     @GET("system/user/info")
     fun getUserInfo(): Call<Result<UserDTO>>
 
+    @GET("system/user")
+    fun getUserList(  @Query("page") page: Int,
+                      @Query("size") size: Int): Call<Result<PageDTO<List<UserDTO>>>>
+
+
     @GET("system/resource/menu?menuType=ME")
     fun getResourceMenu(): Call<Result<ResourceDTO>>
 
@@ -36,6 +41,10 @@ interface ApiService {
     @GET("system/dept")
     fun getDeptList(  @Query("page") page: Int,
                       @Query("size") size: Int): Call<Result<PageDTO<List<DeptDTO>>>>
+
+    @GET("system/role")
+    fun getRoleList(  @Query("page") page: Int,
+                      @Query("size") size: Int): Call<Result<PageDTO<List<RoleDTO>>>>
 
 
     @PUT("system/dept")

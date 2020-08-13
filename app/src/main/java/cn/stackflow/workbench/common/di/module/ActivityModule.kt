@@ -4,8 +4,10 @@ import cn.stackflow.workbench.common.base.WebActivity
 import cn.stackflow.workbench.ui.MainActivity
 import cn.stackflow.workbench.ui.about.AboutActivity
 import cn.stackflow.workbench.ui.account.LoginActivity
-import cn.stackflow.workbench.ui.setting.DeptActivity
-import cn.stackflow.workbench.ui.setting.DeptEditActivity
+import cn.stackflow.workbench.ui.setting.dept.DeptActivity
+import cn.stackflow.workbench.ui.setting.dept.DeptEditActivity
+import cn.stackflow.workbench.ui.setting.role.RoleActivity
+import cn.stackflow.workbench.ui.setting.user.UserActivity
 import cn.stackflow.workbench.ui.splash.SplashActivity
 import com.king.frame.mvvmframe.di.component.BaseActivitySubcomponent
 import dagger.Module
@@ -45,6 +47,11 @@ abstract class ActivityModule {
     @ContributesAndroidInjector
     abstract fun contributeDeptEditActivity(): DeptEditActivity
 
+    @ContributesAndroidInjector
+    abstract fun contributeRoleActivity(): RoleActivity
+
+    @ContributesAndroidInjector
+    abstract fun contributeUserActivity(): UserActivity
 
 //
 //    @ContributesAndroidInjector

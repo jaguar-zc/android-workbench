@@ -12,7 +12,9 @@ import cn.stackflow.workbench.databinding.MeFragmentBinding
 import cn.stackflow.workbench.ui.Constants
 import cn.stackflow.workbench.ui.about.AboutActivity
 import cn.stackflow.workbench.ui.account.ChangePwdActivity
-import cn.stackflow.workbench.ui.setting.DeptActivity
+import cn.stackflow.workbench.ui.setting.dept.DeptActivity
+import cn.stackflow.workbench.ui.setting.role.RoleActivity
+import cn.stackflow.workbench.ui.setting.user.UserActivity
 import kotlinx.android.synthetic.main.home_toolbar.*
 import kotlinx.android.synthetic.main.me_fragment.*
 import kotlinx.android.synthetic.main.toolbar.view.*
@@ -82,7 +84,10 @@ class MeFragment : BaseFragment<MeViewModel, MeFragmentBinding>(), View.OnClickL
             R.id.tvMenu1 -> startActivity(DeptActivity::class.java)
             R.id.tvMenu2 -> startWebActivity("https://github.com/jenly1314", "GitHub")
             R.id.tvMenu3 -> startWebActivity("https://jenly1314.github.io", "Jenly")
-            R.id.tvMenu4 -> startWebActivity("https://developer.android.google.cn", "Android")
+//            R.id.tvMenu4 -> startWebActivity("https://developer.android.google.cn", "Android")            R.id.tvMenu2 -> startWebActivity("https://github.com/jenly1314", "GitHub")
+//            R.id.tvMenu3 -> startActivity(RoleActivity::class.java)
+            R.id.tvMenu4 -> startActivity(RoleActivity::class.java)
+            R.id.tvMenu5 -> startActivity(UserActivity::class.java)
             R.id.btnAbout -> clickAbout()
         }
     }

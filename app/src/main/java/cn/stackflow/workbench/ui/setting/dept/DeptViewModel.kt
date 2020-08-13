@@ -1,10 +1,8 @@
-package cn.stackflow.workbench.ui.setting
+package cn.stackflow.workbench.ui.setting.dept
 
 import android.app.Application
 import cn.stackflow.workbench.common.base.BaseModel
-import cn.stackflow.workbench.common.base.BaseViewModel
 import cn.stackflow.workbench.common.base.ListViewModel
-import cn.stackflow.workbench.common.bean.Bean
 import cn.stackflow.workbench.common.bean.DeptDTO
 import retrofit2.await
 import javax.inject.Inject

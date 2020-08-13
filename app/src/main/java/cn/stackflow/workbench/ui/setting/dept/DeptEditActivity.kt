@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.ui.setting
+package cn.stackflow.workbench.ui.setting.dept
 
 import android.os.Bundle
 import android.text.Editable
@@ -9,7 +9,6 @@ import androidx.lifecycle.Observer
 import cn.stackflow.workbench.R
 import cn.stackflow.workbench.ui.Constants
 import cn.stackflow.workbench.common.base.BaseActivity
-import cn.stackflow.workbench.common.util.CheckUtils
 import cn.stackflow.workbench.databinding.DeptEditActivityBinding
 import com.king.base.util.StringUtils
 import kotlinx.android.synthetic.main.dept_edit_activity.*

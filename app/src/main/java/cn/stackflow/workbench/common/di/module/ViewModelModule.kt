@@ -9,8 +9,10 @@ import cn.stackflow.workbench.ui.layout.audit.AuditViewModel
 import cn.stackflow.workbench.ui.layout.doc.DocViewModel
 import cn.stackflow.workbench.ui.layout.msg.MsgViewModel
 import cn.stackflow.workbench.ui.layout.st.MeViewModel
-import cn.stackflow.workbench.ui.setting.DeptEditViewModel
-import cn.stackflow.workbench.ui.setting.DeptViewModel
+import cn.stackflow.workbench.ui.setting.dept.DeptEditViewModel
+import cn.stackflow.workbench.ui.setting.dept.DeptViewModel
+import cn.stackflow.workbench.ui.setting.role.RoleViewModel
+import cn.stackflow.workbench.ui.setting.user.UserViewModel
 import cn.stackflow.workbench.ui.splash.SplashViewModel
 import com.king.frame.mvvmframe.di.scope.ViewModelKey
 import dagger.Binds
@@ -89,6 +91,18 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(DocViewModel::class)
     abstract fun bindDocViewModel(viewModel: DocViewModel) : ViewModel
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(RoleViewModel::class)
+    abstract fun bindRoleViewModel(viewModel: RoleViewModel) : ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(UserViewModel::class)
+    abstract fun bindUserViewModel(viewModel: UserViewModel) : ViewModel
+
 
 //
 //    @Binds

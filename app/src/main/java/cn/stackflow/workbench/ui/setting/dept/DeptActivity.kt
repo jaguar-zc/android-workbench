@@ -1,4 +1,4 @@
-package cn.stackflow.workbench.ui.setting
+package cn.stackflow.workbench.ui.setting.dept
 
 import android.content.Intent
 import android.os.Bundle
@@ -33,7 +33,8 @@ class DeptActivity : ListActivity<DeptDTO, DeptViewModel>() {
     override fun clickItem(data: DeptDTO) {
         data.name?.let {
 //            showToast(it)
-            var intent = Intent(this,DeptEditActivity::class.java)
+            var intent = Intent(this,
+                DeptEditActivity::class.java)
             intent.putExtra(Constants.KEY_ID,data.id)
             intent.putExtra(Constants.KEY_TITLE,data.name)
             intent.putExtra(Constants.KEY_CONTENT,data.remark)
@@ -44,7 +45,8 @@ class DeptActivity : ListActivity<DeptDTO, DeptViewModel>() {
     override fun onClick(v: View) {
         super.onClick(v)
         if(v.id == R.id.ivRight){
-            var intent = Intent(this,DeptEditActivity::class.java)
+            var intent = Intent(this,
+                DeptEditActivity::class.java)
             startActivity(intent)
         }
     }
