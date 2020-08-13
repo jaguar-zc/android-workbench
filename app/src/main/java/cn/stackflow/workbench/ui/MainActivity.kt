@@ -7,13 +7,14 @@ import androidx.fragment.app.FragmentTransaction
 import cn.stackflow.workbench.R
 import cn.stackflow.workbench.ui.Constants.LOGIN_TOKEN
 import cn.stackflow.workbench.common.base.BaseActivity
-import cn.stackflow.workbench.common.base.BaseViewModel
 import cn.stackflow.workbench.ui.layout.st.MeFragment
 import cn.stackflow.workbench.common.base.TabFragment
 import cn.stackflow.workbench.databinding.HomeActivityBinding
 import cn.stackflow.workbench.common.util.Cache
 import cn.stackflow.workbench.ui.layout.*
+import cn.stackflow.workbench.ui.layout.audit.AuditFragment
 import cn.stackflow.workbench.ui.layout.calendar.CalendarFragment
+import cn.stackflow.workbench.ui.layout.doc.DocFragment
 import cn.stackflow.workbench.ui.layout.msg.MsgFragment
 
 /**
@@ -74,7 +75,6 @@ class MainActivity : BaseActivity<MainViewModel, HomeActivityBinding>() {
 
     private fun getFragment1(fragmentTransaction: FragmentTransaction): Fragment {
         if (fragment1 == null) {
-            //TODO 替换成菜单对应的Fragment
             fragment1 =
                 MsgFragment.newInstance()
             fragment1?.let {
@@ -99,7 +99,6 @@ class MainActivity : BaseActivity<MainViewModel, HomeActivityBinding>() {
 
     private fun getFragment3(fragmentTransaction: FragmentTransaction): Fragment {
         if (fragment3 == null) {
-            //TODO 替换成菜单对应的Fragment
             fragment3 =
                 WorkbenchFragment.newInstance(
                     getString(R.string.home_menu3)
@@ -113,11 +112,10 @@ class MainActivity : BaseActivity<MainViewModel, HomeActivityBinding>() {
 
     private fun getFragment4(fragmentTransaction: FragmentTransaction): Fragment {
         if (fragment4 == null) {
-            //TODO 替换成菜单对应的Fragment
             fragment4 = TabFragment.newInstance({
                 when (it) {
-                    0 -> MenuFragment.newInstance("doc", false)
-                    else -> MenuFragment.newInstance("audit", false)
+                    0 -> DocFragment.newInstance()
+                    else -> AuditFragment.newInstance()
                 }
             }, arrayOf("文档", "审核"), false)
             fragment4?.let {
@@ -129,7 +127,6 @@ class MainActivity : BaseActivity<MainViewModel, HomeActivityBinding>() {
 
     private fun getFragment5(fragmentTransaction: FragmentTransaction): Fragment {
         if (fragment5 == null) {
-            //TODO 替换成菜单对应的Fragment
             fragment5 = MeFragment.newInstance()
             fragment5?.let {
                 fragmentTransaction.add(R.id.fragmentContent, it)

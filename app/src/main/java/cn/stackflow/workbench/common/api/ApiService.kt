@@ -3,7 +3,6 @@ package cn.stackflow.workbench.common.api
 import cn.stackflow.workbench.common.bean.*
 import retrofit2.Call
 import retrofit2.http.*
-import java.util.*
 
 
 /**
@@ -23,10 +22,11 @@ interface ApiService {
 
     @GET("contract/self/list")
     fun getContract(
-        @Part("page") page: Int,
-        @Part("size") size: Int,
-        @Part("auditStatus")  auditStatus: String
-    ): Call<Result<PageDTO<ContractDTO>>>
+        @Query("page") page: Int,
+        @Query("size") size: Int,
+        @Query("listType") listType: Int,
+        @Query("auditStatus") auditStatus: String?
+    ): Call<Result<PageDTO<List<ContractDTO>>>>
 
     @GET("contract/self/search")
     fun getContract(@Part("q") q: String): Call<Result<List<ContractDTO>>>

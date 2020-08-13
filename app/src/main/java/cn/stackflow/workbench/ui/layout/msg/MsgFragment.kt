@@ -12,7 +12,7 @@ import cn.stackflow.workbench.ui.adapter.BannerImageAdapter
 import cn.stackflow.workbench.ui.adapter.BaseBindingAdapter
 import cn.stackflow.workbench.common.base.BaseFragment
 import cn.stackflow.workbench.common.bean.BannerBean
-import cn.stackflow.workbench.common.bean.Bean
+import cn.stackflow.workbench.common.bean.ContractDTO
 import cn.stackflow.workbench.databinding.MsgFragmentBinding
 import com.youth.banner.config.IndicatorConfig
 import com.youth.banner.indicator.CircleIndicator
@@ -26,8 +26,8 @@ import kotlinx.android.synthetic.main.toolbar.view.*
 class MsgFragment : BaseFragment<MsgViewModel, MsgFragmentBinding>() {
 
     val mAdapter by lazy {
-        BaseBindingAdapter<Bean>(
-            R.layout.rv_bean_item
+        BaseBindingAdapter<ContractDTO>(
+            R.layout.msg_item
         )
     }
 
@@ -86,7 +86,7 @@ class MsgFragment : BaseFragment<MsgViewModel, MsgFragmentBinding>() {
         viewModel.getRequestData(curPage, Constants.PAGE_SIZE)
     }
 
-    private fun updateUI(data: Collection<Bean>?, loadMore: Boolean){
+    private fun updateUI(data: List<ContractDTO>?, loadMore: Boolean){
         data?.let {
             if(loadMore) mAdapter.addData(data) else mAdapter.replaceData(data)
 
@@ -100,9 +100,9 @@ class MsgFragment : BaseFragment<MsgViewModel, MsgFragmentBinding>() {
         }
     }
 
-    fun clickItem(data: Bean){
+    fun clickItem(data: ContractDTO){
         //TODO 点击Item处理逻辑
-        showToast(data.title!!)
+        showToast(data.name!!)
     }
 
 

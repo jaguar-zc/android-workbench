@@ -1,9 +1,10 @@
 package cn.stackflow.workbench.common.di.module
 
 import cn.stackflow.workbench.common.base.TabFragment
-import cn.stackflow.workbench.ui.layout.MenuFragment
+import cn.stackflow.workbench.ui.layout.audit.AuditFragment
 import cn.stackflow.workbench.ui.layout.WorkbenchFragment
 import cn.stackflow.workbench.ui.layout.calendar.CalendarFragment
+import cn.stackflow.workbench.ui.layout.doc.DocFragment
 import cn.stackflow.workbench.ui.layout.msg.MsgFragment
 import cn.stackflow.workbench.ui.layout.st.MeFragment
 import com.king.frame.mvvmframe.di.component.BaseFragmentSubcomponent
@@ -32,7 +33,7 @@ abstract class FragmentModule {
     abstract fun contributeWorkbenchFragment(): WorkbenchFragment
 
     @ContributesAndroidInjector
-    abstract fun contributeMenuFragment(): MenuFragment
+    abstract fun contributeAuditFragment(): AuditFragment
 
     @ContributesAndroidInjector
     abstract fun contributeTabFragment(): TabFragment
@@ -40,5 +41,8 @@ abstract class FragmentModule {
     @ContributesAndroidInjector
     abstract fun contributeMeFragment(): MeFragment
 
+
+    @ContributesAndroidInjector
+    abstract fun contributeDocFragment(): DocFragment
 
 }

@@ -32,8 +32,7 @@ class DeptActivity : ListActivity<DeptDTO, DeptViewModel>() {
 
     override fun clickItem(data: DeptDTO) {
         data.name?.let {
-            showToast(it)
-
+//            showToast(it)
             var intent = Intent(this,DeptEditActivity::class.java)
             intent.putExtra(Constants.KEY_ID,data.id)
             intent.putExtra(Constants.KEY_TITLE,data.name)
@@ -45,7 +44,6 @@ class DeptActivity : ListActivity<DeptDTO, DeptViewModel>() {
     override fun onClick(v: View) {
         super.onClick(v)
         if(v.id == R.id.ivRight){
-            showToast("点击Push")
             var intent = Intent(this,DeptEditActivity::class.java)
             startActivity(intent)
         }

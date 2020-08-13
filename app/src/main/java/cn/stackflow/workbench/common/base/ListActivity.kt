@@ -52,7 +52,7 @@ abstract class ListActivity<T, VM : ListViewModel<T>> : BaseActivity<VM, ListAct
     }
 
     open fun observeData(){
-        viewModel.liveData.observe(this, Observer{ t -> updateUI(t,curPage == 1) })
+        viewModel.liveData.observe(this, Observer{ t -> updateUI(t,curPage > 1) })
     }
 
     fun requestData(page: Int){

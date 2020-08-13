@@ -3,8 +3,10 @@ package cn.stackflow.workbench.common.di.module
 import androidx.lifecycle.ViewModel
 import cn.stackflow.workbench.common.base.BaseViewModel
 import cn.stackflow.workbench.ui.MainViewModel
+import cn.stackflow.workbench.ui.about.AboutViewModel
 import cn.stackflow.workbench.ui.account.LoginViewModel
-import cn.stackflow.workbench.ui.layout.MenuViewModel
+import cn.stackflow.workbench.ui.layout.audit.AuditViewModel
+import cn.stackflow.workbench.ui.layout.doc.DocViewModel
 import cn.stackflow.workbench.ui.layout.msg.MsgViewModel
 import cn.stackflow.workbench.ui.layout.st.MeViewModel
 import cn.stackflow.workbench.ui.setting.DeptEditViewModel
@@ -44,13 +46,13 @@ abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(MenuViewModel::class)
-    abstract fun bindMenuViewModel(viewModel: MenuViewModel) : ViewModel
+    @ViewModelKey(AuditViewModel::class)
+    abstract fun bindAuditViewModel(viewModel: AuditViewModel) : ViewModel
 
-//    @Binds
-//    @IntoMap
-//    @ViewModelKey(AboutViewModel::class)
-//    abstract fun bindAboutViewModel(viewModel: AboutViewModel) : ViewModel
+    @Binds
+    @IntoMap
+    @ViewModelKey(AboutViewModel::class)
+    abstract fun bindAboutViewModel(viewModel: AboutViewModel) : ViewModel
 
     @Binds
     @IntoMap
@@ -83,7 +85,10 @@ abstract class ViewModelModule {
     abstract fun bindMsgViewModel(viewModel: MsgViewModel) : ViewModel
 
 
-
+    @Binds
+    @IntoMap
+    @ViewModelKey(DocViewModel::class)
+    abstract fun bindDocViewModel(viewModel: DocViewModel) : ViewModel
 
 //
 //    @Binds

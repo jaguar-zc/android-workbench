@@ -16,7 +16,10 @@ class DeptViewModel @Inject constructor(application: Application, model: BaseMod
     override suspend fun request(curPage: Int, pageSize: Int) {
             val result = apiService.getDeptList(curPage, pageSize).await()
             if (isSuccess(result)) {
-                liveData.value = result.data?.rows
+                var rows = result.data?.rows
+                rows?.let {
+                    liveData.value = it
+                }
             }
     }
 

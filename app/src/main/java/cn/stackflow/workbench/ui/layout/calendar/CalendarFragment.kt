@@ -5,17 +5,15 @@ import androidx.core.view.isVisible
 import cn.stackflow.workbench.R
 import cn.stackflow.workbench.databinding.CalendarFragmentBinding
 import cn.stackflow.workbench.common.base.BaseFragment
-import cn.stackflow.workbench.ui.layout.MenuViewModel
-import kotlinx.android.synthetic.main.home_toolbar.*
+import cn.stackflow.workbench.ui.layout.audit.AuditViewModel
 import kotlinx.android.synthetic.main.home_toolbar.toolbar
 import kotlinx.android.synthetic.main.menu_fragment.*
-import kotlinx.android.synthetic.main.toolbar.*
 import kotlinx.android.synthetic.main.toolbar.view.*
 
 /**
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
-class CalendarFragment(var text: String, var showToolbar: Boolean) : BaseFragment<MenuViewModel, CalendarFragmentBinding>() {
+class CalendarFragment(var text: String, var showToolbar: Boolean) : BaseFragment<AuditViewModel, CalendarFragmentBinding>() {
 
     companion object{
         fun newInstance(text: String,showToolbar: Boolean = true): CalendarFragment {
