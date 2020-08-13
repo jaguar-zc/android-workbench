@@ -166,6 +166,8 @@ dependencies {
 //
 //    debugImplementation "com.amitshekhar.android:debug-db:$versions.debugDb"
 
+
+    implementation 'com.haibin:calendarview:3.6.9'
 }
 
 

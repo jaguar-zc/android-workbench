@@ -18,7 +18,7 @@ open class CMDBroadcastReceiver : BroadcastReceiver() {
 
         Toast.makeText(context, "CMD:$cmd", Toast.LENGTH_LONG).show();
         var intentLogin = Intent(context, LoginActivity::class.java)
-        intentLogin.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        intentLogin.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         context?.startActivity(intentLogin)
     }
 

@@ -88,7 +88,7 @@ class MainActivity : BaseActivity<MainViewModel, HomeActivityBinding>() {
         if (fragment2 == null) {
             fragment2 =
                 CalendarFragment.newInstance(
-                    getString(R.string.home_menu2)
+                    getString(R.string.home_menu2),false
                 )
             fragment2?.let {
                 fragmentTransaction.add(R.id.fragmentContent, it)
