@@ -18,12 +18,14 @@ interface ApiService {
     fun getUserInfo(): Call<Result<UserDTO>>
 
     @GET("system/user")
-    fun getUserList(  @Query("page") page: Int,
-                      @Query("size") size: Int): Call<Result<PageDTO<List<UserDTO>>>>
+    fun getUserList(
+        @Query("page") page: Int,
+        @Query("size") size: Int
+    ): Call<Result<PageDTO<List<UserDTO>>>>
 
 
-    @GET("system/resource/menu?menuType=ME")
-    fun getResourceMenu(): Call<Result<ResourceDTO>>
+    @GET("system/resource/menu")
+    fun getResource(@Query("menuType") resourceType: ResourceType): Call<Result<List<ResourceDTO>>>
 
     @GET("contract/self/list")
     fun getContract(
@@ -37,22 +39,25 @@ interface ApiService {
     fun getContract(@Part("q") q: String): Call<Result<List<ContractDTO>>>
 
 
-
     @GET("system/dept")
-    fun getDeptList(  @Query("page") page: Int,
-                      @Query("size") size: Int): Call<Result<PageDTO<List<DeptDTO>>>>
+    fun getDeptList(
+        @Query("page") page: Int,
+        @Query("size") size: Int
+    ): Call<Result<PageDTO<List<DeptDTO>>>>
 
     @GET("system/role")
-    fun getRoleList(  @Query("page") page: Int,
-                      @Query("size") size: Int): Call<Result<PageDTO<List<RoleDTO>>>>
+    fun getRoleList(
+        @Query("page") page: Int,
+        @Query("size") size: Int
+    ): Call<Result<PageDTO<List<RoleDTO>>>>
 
 
     @PUT("system/dept")
-    fun updateDept( @Body deptDTO: DeptDTO) : Call<Result<String>>
+    fun updateDept(@Body deptDTO: DeptDTO): Call<Result<String>>
 
 
     @POST("system/dept")
-    fun addDept( @Body deptDTO: DeptDTO) : Call<Result<String>>
+    fun addDept(@Body deptDTO: DeptDTO): Call<Result<String>>
 
 
 }

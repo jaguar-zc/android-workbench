@@ -40,7 +40,7 @@
                     android:textSize="@dimen/size_18sp"
                     android:layout_toRightOf="@+id/civAvatar"
                     android:singleLine="true"
-                    tools:text="Jenly"/>
+                    tools:text=""/>
                 <TextView
                     android:id="@+id/tvUsername"
                     android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                     android:layout_toRightOf="@+id/civAvatar"
                     android:layout_below="@+id/tvName"
                     android:singleLine="true"
-                    tools:text="138****8888"/>
+                    tools:text=""/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -115,13 +115,12 @@
                     android:drawableRight="@drawable/ic_jump"
                     android:text="@string/me_menu3"
                     android:background="@drawable/white_selector" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_space"
-                android:background="@color/white">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_line"
+                    android:layout_marginLeft="@dimen/size_16sp"
+                    android:layout_marginRight="@dimen/size_16sp"
+                    android:background="@color/line"/>
                 <TextView
                     android:id="@+id/tvMenu4"
                     android:layout_width="match_parent"
@@ -141,25 +140,33 @@
                     android:layout_marginLeft="@dimen/size_16sp"
                     android:layout_marginRight="@dimen/size_16sp"
                     android:background="@color/line"/>
-                <TextView
-                    android:id="@+id/tvMenu5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/size_16dp"
-                    android:paddingRight="@dimen/size_12dp"
-                    android:paddingTop="@dimen/size_15dp"
-                    android:paddingBottom="@dimen/size_15dp"
-                    android:drawablePadding="@dimen/size_4dp"
-                    android:drawableLeft="@drawable/ic_me_menu"
-                    android:drawableRight="@drawable/ic_jump"
-                    android:text="@string/me_menu5"
-                    android:background="@drawable/white_selector" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/size_line"
-                    android:layout_marginLeft="@dimen/size_16sp"
-                    android:layout_marginRight="@dimen/size_16sp"
-                    android:background="@color/line"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_space"
+                android:background="@color/white">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvMenu5"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="@dimen/size_16dp"-->
+<!--                    android:paddingRight="@dimen/size_12dp"-->
+<!--                    android:paddingTop="@dimen/size_15dp"-->
+<!--                    android:paddingBottom="@dimen/size_15dp"-->
+<!--                    android:drawablePadding="@dimen/size_4dp"-->
+<!--                    android:drawableLeft="@drawable/ic_me_menu"-->
+<!--                    android:drawableRight="@drawable/ic_jump"-->
+<!--                    android:text="@string/me_menu5"-->
+<!--                    android:background="@drawable/white_selector" />-->
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/size_line"-->
+<!--                    android:layout_marginLeft="@dimen/size_16sp"-->
+<!--                    android:layout_marginRight="@dimen/size_16sp"-->
+<!--                    android:background="@color/line"/>-->
                 <LinearLayout
                     android:id="@+id/btnAbout"
                     android:orientation="horizontal"

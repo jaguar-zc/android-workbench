@@ -11,6 +11,7 @@ import cn.stackflow.workbench.ui.layout.msg.MsgViewModel
 import cn.stackflow.workbench.ui.layout.st.MeViewModel
 import cn.stackflow.workbench.ui.setting.dept.DeptEditViewModel
 import cn.stackflow.workbench.ui.setting.dept.DeptViewModel
+import cn.stackflow.workbench.ui.setting.resource.ResourceViewModel
 import cn.stackflow.workbench.ui.setting.role.RoleViewModel
 import cn.stackflow.workbench.ui.setting.user.UserViewModel
 import cn.stackflow.workbench.ui.splash.SplashViewModel
@@ -102,6 +103,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(UserViewModel::class)
     abstract fun bindUserViewModel(viewModel: UserViewModel) : ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ResourceViewModel::class)
+    abstract fun bindResourceViewModel(viewModel: ResourceViewModel) : ViewModel
 
 
 //

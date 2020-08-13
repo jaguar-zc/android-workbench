@@ -22,11 +22,10 @@
     <string name="tips_double_click_exit">再按一次退出</string>
 
     <!-- Me -->
-    <string name="me_menu1">部门管理</string>
-    <string name="me_menu2">合同类型</string>
-    <string name="me_menu3">合同模板</string>
-    <string name="me_menu4">角色管理</string>
-    <string name="me_menu5">用户管理</string>
+    <string name="me_menu1">用户管理</string>
+    <string name="me_menu2">部门管理</string>
+    <string name="me_menu3">角色管理</string>
+    <string name="me_menu4">资源管理</string>
     <string name="me_about">关于</string>
 
     <!-- About -->

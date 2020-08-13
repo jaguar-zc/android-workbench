@@ -10,7 +10,18 @@ data class Bean(
 )
 
 data class LoginReq(var username: String, var password: String)
-data class ResourceDTO(var key: String, var title: String, var children: List<ResourceDTO>)
+data class ResourceDTO(
+    var id: String,
+    var key: String,
+    var title: String,
+    var icon: String,
+    var children: List<ResourceDTO>
+)
+
+enum class ResourceType{
+    ME,ALL
+}
+
 data class LoginResp(var token: String)
 data class PageDTO<T>(var page: Int, var size: Int, var rows: T)
 data class ContractDTO(

@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:bind="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="data"
-            type="cn.stackflow.workbench.common.bean.UserDTO" />
+            type="cn.stackflow.workbench.common.bean.ResourceDTO" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:padding="@dimen/size_10dp">
+        android:padding="@dimen/size_20dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/civAvatar"
-            android:layout_width="@dimen/size_40dp"
-            android:layout_height="@dimen/size_40dp"
-            android:src="@drawable/default_avatar"
-            android:layout_marginRight="@dimen/size_16dp"
-            app:civ_border_color="@color/white"
-            app:civ_border_width="@dimen/size_1dp"
-            bind:imageUrl="@{data.icon}"
+        <TextView
+            android:id="@+id/tvIcon"
+            android:layout_width="@dimen/size_1dp"
+            android:layout_height="match_parent"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/size_20dp"
             android:lineHeight="@dimen/size_40dp"
-            android:text='@{data.deptName+"-"+data.name,default=dept_name}'
+            android:text='@{data.title+"-"+data.key,default=name}'
             android:textSize="@dimen/size_14sp"
-            app:layout_constraintLeft_toRightOf="@+id/civAvatar"
+            app:layout_constraintLeft_toRightOf="@+id/tvIcon"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="-1dp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:lineHeight="@dimen/size_40dp"
+            android:text='@{data.icon,default="admin"}'
+            android:textSize="@dimen/size_14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ivJump"
+            tools:ignore="MissingConstraints" />
+
         <ImageView
             android:id="@+id/ivJump"
             android:layout_width="wrap_content"
@@ -51,7 +57,5 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             tools:ignore="MissingConstraints" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

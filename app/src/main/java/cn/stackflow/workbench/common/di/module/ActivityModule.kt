@@ -6,6 +6,7 @@ import cn.stackflow.workbench.ui.about.AboutActivity
 import cn.stackflow.workbench.ui.account.LoginActivity
 import cn.stackflow.workbench.ui.setting.dept.DeptActivity
 import cn.stackflow.workbench.ui.setting.dept.DeptEditActivity
+import cn.stackflow.workbench.ui.setting.resource.ResourceActivity
 import cn.stackflow.workbench.ui.setting.role.RoleActivity
 import cn.stackflow.workbench.ui.setting.user.UserActivity
 import cn.stackflow.workbench.ui.splash.SplashActivity
@@ -52,6 +53,11 @@ abstract class ActivityModule {
 
     @ContributesAndroidInjector
     abstract fun contributeUserActivity(): UserActivity
+
+
+    @ContributesAndroidInjector
+    abstract fun contributeResourceActivity(): ResourceActivity
+
 
 //
 //    @ContributesAndroidInjector
