@@ -117,7 +117,7 @@ class MainActivity : BaseActivity<MainViewModel, HomeActivityBinding>() {
                     0 -> DocFragment.newInstance()
                     else -> AuditFragment.newInstance()
                 }
-            }, arrayOf("文档", "审核"), false)
+            }, arrayOf("文档", "审核"), true,"文档")
             fragment4?.let {
                 fragmentTransaction.add(R.id.fragmentContent, it)
             }
