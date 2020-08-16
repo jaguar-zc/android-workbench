@@ -15,6 +15,7 @@ data class ResourceDTO(
     var key: String,
     var title: String,
     var icon: String,
+    var level: Int,
     var children: List<ResourceDTO>
 )
 

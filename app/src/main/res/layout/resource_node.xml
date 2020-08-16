@@ -28,11 +28,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             tools:ignore="MissingConstraints" />
-        <ImageView
+        <TextView
             android:id="@+id/ivJump"
             android:layout_width="@dimen/size_20dp"
             android:layout_height="match_parent"
-            android:background="@drawable/ic_jump"
+            android:text="@string/iconfont_tongyong_jiantouxiangyou"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"

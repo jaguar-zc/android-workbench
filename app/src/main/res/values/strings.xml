@@ -73,4 +73,11 @@
     <string name="reset_password">重置密码</string>
     <string name="change_password">修改密码</string>
 
+
+    <!--iconfont-->
+    <string name="iconfont_tongyong_jiantouxiangyou">&#xe658;</string>
+    <string name="iconfont_tongyong_jiantouxiangxia">&#xe657;</string>
+
+    <!---->
+
 </resources>

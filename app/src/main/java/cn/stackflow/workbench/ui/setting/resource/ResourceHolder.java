@@ -12,6 +12,7 @@ import com.unnamed.b.atv.model.TreeNode;
 
 import cn.stackflow.workbench.R;
 import cn.stackflow.workbench.common.bean.ResourceDTO;
+import cn.stackflow.workbench.common.util.FontHelper;
 
 public class ResourceHolder extends TreeNode.BaseNodeViewHolder<ResourceDTO> {
     LinearLayout linearLayout;
@@ -29,7 +30,8 @@ public class ResourceHolder extends TreeNode.BaseNodeViewHolder<ResourceDTO> {
         final LayoutInflater inflater = LayoutInflater.from(context);
         final View view = inflater.inflate(R.layout.resource_node,  linearLayout, false);
         TextView tvValue = (TextView) view.findViewById(R.id.tvIcon);
-        ImageView ivJump = (ImageView) view.findViewById(R.id.ivJump);
+        TextView ivJump = (TextView) view.findViewById(R.id.ivJump);
+        FontHelper.applyFont(context,ivJump);
         tvValue.setText(value.getTitle());
         if(value.getChildren() != null && value.getChildren().size() > 0){
             ivJump.setVisibility(View.VISIBLE);

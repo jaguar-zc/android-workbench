@@ -18,13 +18,15 @@ import kotlinx.android.synthetic.main.toolbar.view.*
 /**
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
-class ResourceActivity : BaseActivity<ResourceViewModel, ResourceActivityBinding>() {
+class ResourceActivity : BaseActivity<ResourceViewModel, ResourceActivityBinding>(),
+    TreeNode.TreeNodeClickListener {
 
 
     override fun initData(savedInstanceState: Bundle?) {
         super.initData(savedInstanceState)
         setToolbarTitle("资源管理")
         toolbar.ivRight.setImageResource(R.drawable.push)
+
 //        val root = TreeNode.root()
 //        val parent = TreeNode("MyParentNode")
 //        val child0 = TreeNode("ChildNode0")
@@ -34,14 +36,10 @@ class ResourceActivity : BaseActivity<ResourceViewModel, ResourceActivityBinding
 //        val tView = AndroidTreeView(context, root)
 //        srl.addView(tView.view)
 
-        viewModel.liveData.observe(this,Observer {
+        viewModel.liveData.observe(this, Observer {
             refreshTreeView(it)
         })
-
-
         viewModel.requestData(1)
-
-
 
 //        val nodeItem = IconTreeItem()
 //        val child1 =  TreeNode(nodeItem).setViewHolder(ResourceHolder(context))
@@ -49,20 +47,22 @@ class ResourceActivity : BaseActivity<ResourceViewModel, ResourceActivityBinding
     }
 
 
-
-
-
-    private fun createChildrenNote(resourceDTO: ResourceDTO): TreeNode{
-        return  TreeNode(resourceDTO).setViewHolder(ResourceHolder(context,llView));
+    private fun createChildrenNote(resourceDTO: ResourceDTO): TreeNode {
+        var treeNode = TreeNode(resourceDTO)
+        treeNode.viewHolder = ResourceHolder(context, llView);
+        treeNode.clickListener = this
+        return treeNode;
     }
 
 
-    private fun refreshTreeView(list: List<ResourceDTO>){
+    private fun refreshTreeView(list: List<ResourceDTO>) {
         val root = TreeNode.root()
         list.forEach { it ->
-            val parent = TreeNode(it).setViewHolder(ResourceHolder(context,llView))
+            it.level = 1
+            val parent = createChildrenNote(it)
             it.children.forEach { ii ->
                 run {
+                    ii.level = 2
                     parent.addChild(createChildrenNote(ii))
                 }
             }
@@ -80,11 +80,19 @@ class ResourceActivity : BaseActivity<ResourceViewModel, ResourceActivityBinding
 
     override fun onClick(v: View) {
         super.onClick(v)
-        if(v.id == R.id.ivRight){
+        if (v.id == R.id.ivRight) {
 //            var intent = Intent(this,
 //                DeptEditActivity::class.java)
 //            startActivity(intent)
         }
+    }
+
+    override fun onClick(node: TreeNode?, value: Any?) {
+         node.let {
+             if(it?.children?.size!! > 0 ){
+
+             }
+         }
     }
 
 }

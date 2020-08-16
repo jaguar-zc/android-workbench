@@ -11,6 +11,9 @@ object Constants {
     const val isDomain = false
 //    const val BASE_URL = "https://github.com"
     const val BASE_URL = "http://47.110.10.117:8080/api/v1/"
+    const val ICONFONT_NAME = "iconfont/iconfont.ttf"
+
+
 
     const val TAG = "Workbench"
     const val LOGIN_TOKEN = "LOGIN_TOKEN"
