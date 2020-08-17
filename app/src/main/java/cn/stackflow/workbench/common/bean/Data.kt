@@ -16,6 +16,8 @@ data class ResourceDTO(
     var title: String,
     var icon: String,
     var level: Int,
+    var open: Boolean = false,
+    var leaf: Int,//叶子节点
     var children: List<ResourceDTO>
 )
 

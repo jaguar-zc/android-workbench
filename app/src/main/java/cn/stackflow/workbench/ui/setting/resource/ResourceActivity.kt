@@ -2,12 +2,12 @@ package cn.stackflow.workbench.ui.setting.resource
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.lifecycle.Observer
 import cn.stackflow.workbench.R
 import cn.stackflow.workbench.common.base.BaseActivity
 import cn.stackflow.workbench.common.bean.ResourceDTO
 import cn.stackflow.workbench.databinding.ResourceActivityBinding
-import com.orhanobut.logger.Logger
 import com.unnamed.b.atv.model.TreeNode
 import com.unnamed.b.atv.view.AndroidTreeView
 import kotlinx.android.synthetic.main.resource_activity.*
@@ -59,10 +59,12 @@ class ResourceActivity : BaseActivity<ResourceViewModel, ResourceActivityBinding
         val root = TreeNode.root()
         list.forEach { it ->
             it.level = 1
+            it.leaf = isLeaf(it)
             val parent = createChildrenNote(it)
             it.children.forEach { ii ->
                 run {
                     ii.level = 2
+                    ii.leaf = isLeaf(ii)
                     parent.addChild(createChildrenNote(ii))
                 }
             }
@@ -70,6 +72,14 @@ class ResourceActivity : BaseActivity<ResourceViewModel, ResourceActivityBinding
         }
         val tView = AndroidTreeView(this, root)
         llView.addView(tView.view)
+    }
+
+    private fun isLeaf(resourceDTO: ResourceDTO): Int {
+        return if (resourceDTO.children != null && resourceDTO.children.isNotEmpty()) {
+            0
+        } else {
+            1
+        }
     }
 
 
@@ -88,11 +98,18 @@ class ResourceActivity : BaseActivity<ResourceViewModel, ResourceActivityBinding
     }
 
     override fun onClick(node: TreeNode?, value: Any?) {
-         node.let {
-             if(it?.children?.size!! > 0 ){
+        var resourceDTO = value as ResourceDTO
+        resourceDTO.open = ! resourceDTO.open
 
-             }
-         }
+        var     resourceHolder = node?.viewHolder as ResourceHolder
+
+        var ivIcon = resourceHolder.view.findViewWithTag<TextView>(value.id)
+        if (value.open) {
+            ivIcon.setText(R.string.iconfont_tongyong_jiantouxiangxia)
+        } else {
+            ivIcon.setText(R.string.iconfont_tongyong_jiantouxiangyou)
+        }
+
     }
 
 }

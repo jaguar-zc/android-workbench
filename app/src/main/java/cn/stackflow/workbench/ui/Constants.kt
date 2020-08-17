@@ -18,7 +18,7 @@ object Constants {
     const val TAG = "Workbench"
     const val LOGIN_TOKEN = "LOGIN_TOKEN"
 
-    const val PAGE_SIZE = 10
+    const val PAGE_SIZE = 20
 
     const val DOUBLE_CLICK_EXIT_TIME = 2500
 

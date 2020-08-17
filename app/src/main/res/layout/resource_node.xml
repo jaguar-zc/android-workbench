@@ -13,29 +13,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:padding="@dimen/size_20dp">
-        <TextView
-            android:id="@+id/tvIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:text="巩固走太"
-            tools:ignore="MissingConstraints" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            tools:ignore="MissingConstraints" />
-        <TextView
-            android:id="@+id/ivJump"
-            android:layout_width="@dimen/size_20dp"
-            android:layout_height="match_parent"
-            android:text="@string/iconfont_tongyong_jiantouxiangyou"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:ignore="MissingConstraints" />
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="@dimen/size_20dp">
+            <TextView
+                android:id="@+id/ivIcon"
+                android:layout_width="@dimen/size_20dp"
+                android:layout_height="match_parent"
+                android:text="@string/iconfont_tongyong_jiantouxiangyou"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:text="text1"
+                android:textColor="@color/black"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"></View>
     </LinearLayout>
 </layout>
